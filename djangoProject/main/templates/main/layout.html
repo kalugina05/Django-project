@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'main/img/logotype.png' %}" alt = "логотип" width="32" height="32">
+        <p class="header-text">- разработчик</p>
+    </header>
+    <main>
+        <section class = "menu">
+            <span class="menu_text">Меню:</span>
+            <ul class="menu_list list">
+                <li class="menu_item item">
+                    <a href="#" class="menu_link link">
+                        <img src="{% static 'main/img/home.svg' %}" alt="home" width="20" height="20">
+                        <span>Главная страница</span>
+                    </a>
+                </li>
+                <li class="menu_item item">
+                    <a href="#" class="menu_link link">
+                        <img src="{% static 'main/img/phone_signal.svg' %}" alt="phone_signal" width="20" height="20">
+                        <span>Общая статистика</span>
+                    </a>
+                </li>
+                <li class="menu_item item">
+                    <a href="#" class="menu_link link">
+                        <img src="{% static 'main/img/statistic.svg' %}" alt="statistic" width="24" height="20">
+                        <span>Востребованность</span>
+                    </a>
+                </li>
+                <li class="menu_item item">
+                    <a href="#" class="menu_link link">
+                        <img src="{% static 'main/img/map_marker.svg' %}" alt="map_marker" width="16.5" height="22">
+                        <span>География</span>
+                    </a>
+                </li>
+                <li class="menu_item item">
+                    <a href="#" class="menu_link link">
+                        <img src="{% static 'main/img/sparks.svg' %}" alt="sparks" width="21.65" height="20">
+                        <span>Навыки</span>
+                    </a>
+                </li>
+                <li class="menu_item item">
+                    <a href="#" class="menu_link link">
+                        <img src="{% static 'main/img/clock.svg' %}" alt="clock" width="20" height="20">
+                        <span>Последние вакансии</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class = "content">
+            {% block content %}
+            {% endblock %}
+        </section>
+    </main>
+    <footer class = "foot">
+        <p class="footer-text">Калугина Анна Алексеевна РИ-230912</p>
+    </footer>
+</body>
+</html>
