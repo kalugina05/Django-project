@@ -17,6 +17,10 @@ header {
     background-color: #f5f6fb
 }
 
+header > img{
+    margin-top: 6px;
+}
+
 .header-text {
     position: absolute;
     left: 50px;
@@ -120,7 +124,7 @@ h1{
 }
 
 .toggle-container{
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 30px;
 }
 
