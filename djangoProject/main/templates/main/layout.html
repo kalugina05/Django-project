@@ -17,38 +17,38 @@
             <span class="menu_text">Меню:</span>
             <ul class="menu_list list">
                 <li class="menu_item item">
-                    <a href="#" class="menu_link link">
-                        <img src="{% static 'main/img/home.svg' %}" alt="home" width="20" height="20">
+                    <a href="{% url 'home' %}" class="menu_link link">
+                        <img src="{% static 'main/img/home.svg' %}" alt="home" width="24" height="24">
                         <span>Главная страница</span>
                     </a>
                 </li>
                 <li class="menu_item item">
-                    <a href="#" class="menu_link link">
-                        <img src="{% static 'main/img/phone_signal.svg' %}" alt="phone_signal" width="20" height="20">
+                    <a href="{% url 'general_statistics' %}" class="menu_link link">
+                        <img src="{% static 'main/img/phone_signal.svg' %}" alt="phone_signal" width="24" height="24">
                         <span>Общая статистика</span>
                     </a>
                 </li>
                 <li class="menu_item item">
-                    <a href="#" class="menu_link link">
-                        <img src="{% static 'main/img/statistic.svg' %}" alt="statistic" width="24" height="20">
+                    <a href="{% url 'relevance' %}" class="menu_link link">
+                        <img src="{% static 'main/img/statistic.svg' %}" alt="statistic" width="24" height="24">
                         <span>Востребованность</span>
                     </a>
                 </li>
                 <li class="menu_item item">
-                    <a href="#" class="menu_link link">
-                        <img src="{% static 'main/img/map_marker.svg' %}" alt="map_marker" width="16.5" height="22">
+                    <a href="{% url 'geography' %}" class="menu_link link">
+                        <img src="{% static 'main/img/map_marker.svg' %}" alt="map_marker" width="24" height="26">
                         <span>География</span>
                     </a>
                 </li>
                 <li class="menu_item item">
-                    <a href="#" class="menu_link link">
-                        <img src="{% static 'main/img/sparks.svg' %}" alt="sparks" width="21.65" height="20">
+                    <a href="{% url 'skills' %}" class="menu_link link">
+                        <img src="{% static 'main/img/sparks.svg' %}" alt="sparks" width="24" height="24">
                         <span>Навыки</span>
                     </a>
                 </li>
                 <li class="menu_item item">
-                    <a href="#" class="menu_link link">
-                        <img src="{% static 'main/img/clock.svg' %}" alt="clock" width="20" height="20">
+                    <a href="{% url 'recent_jobs' %}" class="menu_link link">
+                        <img src="{% static 'main/img/clock.svg' %}" alt="clock" width="24" height="24">
                         <span>Последние вакансии</span>
                     </a>
                 </li>
@@ -62,5 +62,7 @@
     <footer class = "foot">
         <p class="footer-text">Калугина Анна Алексеевна РИ-230912</p>
     </footer>
+    
+    <script src="{% static 'main/js/index.js' %}"></script>
 </body>
 </html>

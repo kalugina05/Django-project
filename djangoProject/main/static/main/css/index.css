@@ -71,12 +71,8 @@ ul {
     position: relative;
     text-decoration: none;
     height: 45px;
-    padding-left: 20px;
+    padding-left: 15px;
     align-items: center;
-}
-
-.link > img {
-    margin-right: 20px;
 }
 
 .link > span{
@@ -84,6 +80,7 @@ ul {
     text-decoration: none;
     color: white;
     font-size: 16px;
+    margin-left: 20px;
 }
 
 .link:hover{
@@ -105,6 +102,10 @@ ul {
     background-color: #548BCE;
 }
 
+.menu_link.active {
+    background-color: #548BCE;
+}
+
 .content > img {
     float: right;
     margin-top: 10px;
@@ -116,6 +117,57 @@ h1{
     font-weight: 600;
     font-size: 50px;
     padding-left: 80px;
+}
+
+.toggle-container{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.toggle-list {
+    display: none;
+}
+
+.toggle-list-number{
+    margin-left: 50px;
+    list-style-type: decimal;
+    font-weight: 500;
+}
+
+.toggle-list-point{
+    margin-left: 50px;
+    list-style-type: disc;
+    font-weight: 400;
+}
+
+.toggle-text {
+    font-weight: 400;
+}
+
+.arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px; 
+    border-left: 3px solid #444444;
+    border-bottom: 3px solid #444444; 
+    transform: rotate(-135deg);
+    margin-right: 15px;
+    transition: transform 0.3s; 
+}
+
+.active .arrow {
+    transform: rotate(-45deg); 
+}
+
+.toggle-header {
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer; 
+    transition: color 0.1s; 
+}
+
+.toggle-header:hover {
+    color: #548BCE; 
 }
 
 footer {
