@@ -1,11 +1,13 @@
 from django.shortcuts import render
+from .models import Salary_years
 
 
 def index(request):
     return render(request, 'main/index.html')
 
 def general_statistics(request):
-    return render(request, 'main/statistics.html')
+    dynamics = Salary_years.objects.all()
+    return render(request, 'main/statistics.html', {'dynamics': dynamics })
 
 def geography(request):
     return render(request, 'main/geography.html')

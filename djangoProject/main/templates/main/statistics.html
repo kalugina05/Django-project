@@ -1,7 +1,27 @@
 {% extends 'main/layout.html' %}
+{% load static %}
 
 
 {% block title %}Общая статистика{% endblock %}
 
 {% block content %}
+<div class="container">
+    <img src="{% static 'main/img/1 график.png' %}" class = 'gr1' alt="главная картинка" width="850" height="500">
+<table>
+    <thead>
+        <tr>
+            <th>Год</th>
+            <th>Средняя зарплата</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for el in dynamics %}
+            <tr>
+                <td>{{ el.year }}</td>
+                <td>{{ el.average_salary }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
 {% endblock %}

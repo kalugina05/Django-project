@@ -193,4 +193,29 @@ footer {
     color: #444444;
 }
 
+table {
+    border-collapse: collapse; /* Убираем двойные границы */
+    width: 15%; /* Ширина таблицы */
+    height: 200px;
+    margin: 20px; /* Центрируем таблицу */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden; /* Применяем закругление к границам */
+}
+th, td {
+    border: 1px solid blue; /* Синяя рамка для ячеек */
+    padding: 3px; /* Отступы внутри ячеек */
+    text-align: center; /* Центрируем текст */
+}
+th {
+    background-color: #f2f2f2; /* Цвет фона заголовков */
+}
+
+.container {
+    display: flex; /* Используем flexbox для размещения элементов */
+    align-items: center; /* Выравнивание по верхнему краю */
+}
+.gr1 {
+    margin-right: 20px; /* Отступ между картинкой и таблицей */
+    margin-left: 50px;
+}
 
