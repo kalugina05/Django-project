@@ -6,22 +6,100 @@
 
 {% block content %}
 <div class="container">
-    <img src="{% static 'main/img/1 график.png' %}" class = 'gr1' alt="главная картинка" width="850" height="500">
-<table>
-    <thead>
-        <tr>
-            <th>Год</th>
-            <th>Средняя зарплата</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for el in dynamics %}
-            <tr>
-                <td>{{ el.year }}</td>
-                <td>{{ el.average_salary }}</td>
-            </tr>
-        {% endfor %}
-    </tbody>
-</table>
+    <div class="container1">
+        <img src="{% static 'main/img/1 график.png' %}" class = 'gr1' alt="главная картинка" width="850" height="500">
+        <table class="table table1">
+            <thead>
+                <tr>
+                    <th class="th1">Год</th>
+                    <th class="th1">Средняя зарплата</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in dynamics %}
+                    <tr>
+                        <td class="td1">{{ el.year }}</td>
+                        <td class="td1">{{ el.average_salary }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="container2">
+        <img src="{% static 'main/img/2 график.png' %}" class = 'gr2' alt="главная картинка" width="850" height="500">
+        <table class="table table2">
+            <thead>
+                <tr>
+                    <th class="th2">Год</th>
+                    <th class="th2">Количество вакансий</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in dynamics_count %}
+                    <tr>
+                        <td class="td2">{{ el.year }}</td>
+                        <td class="td2">{{ el.count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="container3">
+        <img src="{% static 'main/img/3 график.png' %}" class = 'gr3' alt="главная картинка" width="900" height="600">
+        <table class="table table3">
+            <thead>
+                <tr>
+                    <th class="th3">Город</th>
+                    <th class="th3">Средняя зарплата</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in salary_city_level %}
+                    <tr>
+                        <td class="td3">{{ el.city }}</td>
+                        <td class="td3">{{ el.average_salary }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="container4">
+        <img src="{% static 'main/img/4 график 1.png' %}" class = 'gr4' alt="главная картинка" width="700" height="700">
+        <table class="table table4">
+            <thead>
+                <tr>
+                    <th class="th4">Город</th>
+                    <th class="th4">Доля вакансий</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in rate_vacancy %}
+                    <tr>
+                        <td class="td4">{{ el.city }}</td>
+                        <td class="td4">{{ el.rate_vacancy }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="container5">
+        <img src="{% static 'main/img/5ый график.png' %}" class = 'gr5' alt="главная картинка" width="850" height="500">
+        <table class="table table5">
+            <thead>
+                <tr>
+                    <th class="th5">Навык</th>
+                    <th class="th5">Количество упоминаний</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in skills %}
+                    <tr>
+                        <td class="td5">{{ el.skill }}</td>
+                        <td class="td5">{{ el.count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 {% endblock %}
