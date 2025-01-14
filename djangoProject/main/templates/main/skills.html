@@ -4,4 +4,29 @@
 {% block title %}Навыки{% endblock %}
 
 {% block content %}
+<div class="container">
+    <div class="container5">
+        {% for el in image5 %}
+            {% if el.img5 %}
+                    <img class = gr5.5 src="{{ el.img5.url }}"  width="900" height="600">
+            {% endif %}
+        {% endfor %}
+        <table class="table table2">
+            <thead>
+                <tr>
+                    <th class="th5">Навык</th>
+                    <th class="th5">Количество упоминаний</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in skills %}
+                    <tr>
+                        <td class="td5">{{ el.skill }}</td>
+                        <td class="td5">{{ el.count }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}

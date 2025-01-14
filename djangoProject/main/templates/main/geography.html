@@ -4,5 +4,52 @@
 {% block title %}География{% endblock %}
 
 {% block content %}
-    <p>география</p>
+<div class="container">
+    <div class="container2">
+        {% for el in image3 %}
+            {% if el.img3 %}
+                    <img class = gr3_3 src="{{ el.img3.url }}"  width="900" height="600">
+            {% endif %}
+        {% endfor %}
+        <table class="table table2">
+            <thead>
+                <tr>
+                    <th class="th3">Город</th>
+                    <th class="th3">Средняя зарплата</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in salary_city_level %}
+                    <tr>
+                        <td class="td3">{{ el.city }}</td>
+                        <td class="td3">{{ el.average_salary }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="container4">
+        {% for el in image4 %}
+            {% if el.img4 %}
+                    <img class = gr4.4 src="{{ el.img4.url }}"  width="900" height="600">
+            {% endif %}
+        {% endfor %}
+        <table class="table table4">
+            <thead>
+                <tr>
+                    <th class="th4">Город</th>
+                    <th class="th4">Доля вакансий</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for el in rate_vacancy %}
+                    <tr>
+                        <td class="td4">{{ el.city }}</td>
+                        <td class="td4">{{ el.rate_vacancy }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
