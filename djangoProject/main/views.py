@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Salary_years, Number_vacancies, Salary_city, Vacancy_rate_city, Skills, Salary_years_developer, Salary_years_developer_img, Number_vacancies_developer, Number_vacancies_developer_img, Salary_city_developer, Salary_city_developer_img, Vacancy_rate_city_developer, Vacancy_rate_city_developer_img, Skills_developer, Skills_developer_img
-
+import requests
+from datetime import datetime, timedelta
+from django.shortcuts import render
 
 def index(request):
     return render(request, 'main/index.html')
@@ -33,4 +35,50 @@ def skills(request):
     return render(request, 'main/skills.html', {'skills': skills, 'image5':image5})
 
 def recent_jobs(request):
-    return render(request, 'main/recent_jobs.html')
+    now = datetime.now()
+    two_days_ago = now - timedelta(days=2)
+
+    url = "https://api.hh.ru/vacancies"
+    params = {
+        "text": "1С-разработчик OR 1c разработчик OR 1с OR 1c OR 1 c OR 1 с",
+        "search_field": "name",
+        "per_page": 10,
+        "order_by": "publication_time",
+        "date_from": two_days_ago.isoformat() + "Z", 
+    }
+
+    response = requests.get(url, params=params)
+
+    if response.status_code != 200:
+        print(f"Ошибка при запросе: {response.status_code}")
+        vacancies = []
+    else:
+        print(response.json())  
+        vacancies = response.json().get('items', [])
+
+        vacancy_details = []
+
+        for vacancy in vacancies:
+            vacancy_id = vacancy['id']
+            details_url = f'https://api.hh.ru/vacancies/{vacancy_id}'
+            details_response = requests.get(details_url)
+
+            if details_response.status_code != 200:
+                continue
+            
+            details_data = details_response.json()
+            published_at = datetime.fromisoformat(details_data['published_at'].replace('Z', '+00:00'))
+            formatted_datetime = published_at.strftime("%d:%m:%Y %H:%M")
+
+            vacancy_info = {
+                'title': details_data['name'],
+                'description': details_data['description'],
+                'skills': ', '.join([skill['name'] for skill in details_data.get('key_skills', [])]),
+                'company': details_data['employer']['name'],
+                'salary': details_data['salary']['from'] if details_data.get('salary') and details_data['salary']['from'] is not None else 'Не указано',
+                'region': details_data['area']['name'],
+                'published_at': formatted_datetime
+            }
+            
+            vacancy_details.append(vacancy_info)
+    return render(request, 'main/recent_jobs.html', {'vacancies': vacancy_details})

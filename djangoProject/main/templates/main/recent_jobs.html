@@ -1,7 +1,26 @@
 {% extends 'main/layout.html' %}
 
-
 {% block title %}Последние вакансии{% endblock %}
 
 {% block content %}
+<div class = "vacancy">
+    <h1>Список вакансий</h1>
+        {% if vacancies %}
+            <ul>
+            {% for vacancy in vacancies %}
+                <li>
+                    <h2>{{ vacancy.title }}</h2>
+                    <div class="description">{{ vacancy.description|safe }}</div>
+                    <p>Навыки: {{ vacancy.skills }}</p>
+                    <p>Компания: {{ vacancy.company }}</p>
+                    <p>Оклад: {{ vacancy.salary }}</p>
+                    <p>Регион: {{ vacancy.region }}</p>
+                    <p>Дата и время публикации: {{ vacancy.published_at }}</p>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>Вакансии не найдены.</p>
+        {% endif %}
+</div>
 {% endblock %}
