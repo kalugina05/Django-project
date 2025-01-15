@@ -3,13 +3,13 @@
 {% block title %}Последние вакансии{% endblock %}
 
 {% block content %}
+<h1 class="vac">Последние вакансии профессии 1С-разработчик</h1>
 <div class = "vacancy">
-    <h1>Список вакансий</h1>
         {% if vacancies %}
             <ul>
             {% for vacancy in vacancies %}
                 <li>
-                    <h2>{{ vacancy.title }}</h2>
+                    <h2 class="vacancy-title">{{ vacancy.title }}</h2>
                     <div class="description">{{ vacancy.description|safe }}</div>
                     <p>Навыки: {{ vacancy.skills }}</p>
                     <p>Компания: {{ vacancy.company }}</p>

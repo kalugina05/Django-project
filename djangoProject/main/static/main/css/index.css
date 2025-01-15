@@ -199,6 +199,13 @@ footer {
     align-items: center;
 }
 
+.container0{
+    margin-top: -150px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
 .table1 {
     float: right;
     border-collapse: collapse;
@@ -360,3 +367,123 @@ th {
     margin-top: 0;
 }
 
+.table5_5 {
+    float: right;
+    border-collapse: collapse; 
+    width: 15%; 
+    height: 200px;
+    margin: 20px; 
+    margin-right: 20px;
+    margin-top: -600px;
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.gr5_5 {
+    margin-right: 20px; 
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.header-r {
+    border-top: 4px solid blue; /* Голубая верхняя граница */
+    border-left: 4px solid blue; /* Голубая левая граница */
+    border-right: 4px solid #ffd700; /* Желтая правая граница */
+    border-bottom: 4px solid #ffd700; /* Желтая нижняя граница */
+    border-radius: 10px; /* Закругление углов */
+    padding: 10px; /* Отступы внутри рамки */
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: #f2f2f2; /* Светлый фон для контраста */
+    margin-bottom: 30px;
+}
+
+.header-title-r {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin: 0; /* Убираем отступы у заголовка */
+    padding: 0;
+}
+
+.header-text-r {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.header-g {
+    border-top: 4px solid lightgreen; /* Голубая верхняя граница */
+    border-left: 4px solid lightgreen; /* Голубая левая граница */
+    border-right: 4px solid #CA6E55; /* Желтая правая граница */
+    border-bottom: 4px solid #CA6E55; /* Желтая нижняя граница */
+    border-radius: 10px; /* Закругление углов */
+    padding: 10px; /* Отступы внутри рамки */
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: #f2f2f2; /* Светлый фон для контраста */
+    margin-bottom: 30px;
+}
+
+.header-title-g {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin: 0; /* Убираем отступы у заголовка */
+    padding: 0;
+}
+
+.header-text-g {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.gr3-3{
+    margin-left: 40px;
+    margin-top: -20px;
+}
+
+.table3-3{
+    margin-top: 90px;
+    float: right;
+    border-collapse: collapse; 
+    width: 15%; 
+    height: 200px; 
+    margin-right: 50px;
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.header-s {
+    border: 4px solid orange; /* Голубая верхняя граница */
+    border-radius: 10px; /* Закругление углов */
+    padding: 10px; /* Отступы внутри рамки */
+    text-align: center; /* Выравнивание текста по центру */
+    background-color: #f2f2f2; /* Светлый фон для контраста */
+    margin-bottom: 30px;
+}
+
+.header-title-s {
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    margin: 0; /* Убираем отступы у заголовка */
+    padding: 0;
+}
+
+.header-text-s {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.vac{
+    margin-top:-10px;
+    font-family: "Segoe UI";
+    font-weight: 600;
+    font-size: 50px;
+    padding: 0;
+}
+
+.vacancy-title {
+    color: #0E1A72; 
+}

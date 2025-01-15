@@ -4,14 +4,17 @@
 {% block title %}Навыки{% endblock %}
 
 {% block content %}
+<div class="header-s">
+    <h1 class="header-title-s">ТОП-20 навыков для профессии 1С-разработчик</h1>
+</div>
 <div class="container">
     <div class="container5">
         {% for el in image5 %}
             {% if el.img5 %}
-                    <img class = gr5.5 src="{{ el.img5.url }}"  width="900" height="600">
+                    <img class = gr5-5 src="{{ el.img5.url }}"  width="900" height="600">
             {% endif %}
         {% endfor %}
-        <table class="table table2">
+        <table class="table table5_5">
             <thead>
                 <tr>
                     <th class="th5">Навык</th>

@@ -1,14 +1,17 @@
 {% extends 'main/layout.html' %}
 
-
 {% block title %}Востребованность{% endblock %}
 
 {% block content %}
+<div class="header-r">
+    <h1 class="header-title-r">Какая востребованность у профессии 1С-разработчик?</h1>
+    <p class="header-text-r">Динамика уровня зарплат по годам. Динамика количества вакансий по годам.</p>
+</div>
 <div class="container">
     <div class="container1">
         {% for el in image1 %}
             {% if el.img1 %}
-                    <img class = gr1.1 src="{{ el.img1.url }}"  width="900" height="600">
+                <img class="gr1.1" src="{{ el.img1.url }}" width="900" height="600">
             {% endif %}
         {% endfor %}
         <table class="table table1">
@@ -31,7 +34,7 @@
     <div class="container2">
         {% for el in image2 %}
             {% if el.img2 %}
-                    <img class = gr1.1 src="{{ el.img2.url }}"  width="900" height="600">
+                <img class="gr1.1" src="{{ el.img2.url }}" width="900" height="600">
             {% endif %}
         {% endfor %}
         <table class="table table2">

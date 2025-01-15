@@ -4,14 +4,18 @@
 {% block title %}География{% endblock %}
 
 {% block content %}
+<div class="header-g">
+    <h1 class="header-title-g">В каком городе востребована профессия 1С-разработчик?</h1>
+    <p class="header-text-g">Уровень зарплат по городам. Доля вакансий по городам.</p>
+</div>
 <div class="container">
     <div class="container2">
         {% for el in image3 %}
             {% if el.img3 %}
-                    <img class = gr3_3 src="{{ el.img3.url }}"  width="900" height="600">
+                    <img class = gr3-3 src="{{ el.img3.url }}"  width="900" height="600">
             {% endif %}
         {% endfor %}
-        <table class="table table2">
+        <table class="table table3-3">
             <thead>
                 <tr>
                     <th class="th3">Город</th>
