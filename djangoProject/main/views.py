@@ -36,7 +36,7 @@ def skills(request):
 
 def recent_jobs(request):
     now = datetime.now()
-    two_days_ago = now - timedelta(days=2)
+    one_days_ago = now - timedelta(days=1)
 
     url = "https://api.hh.ru/vacancies"
     params = {
@@ -44,7 +44,7 @@ def recent_jobs(request):
         "search_field": "name",
         "per_page": 10,
         "order_by": "publication_time",
-        "date_from": two_days_ago.isoformat() + "Z", 
+        "date_from": one_days_ago.isoformat() + "Z", 
     }
 
     response = requests.get(url, params=params)
